@@ -8,7 +8,7 @@ public class DB_Connector {
     private static final String DRIVER = "com.mysql.jdbc.Driver"; //JDBC driver
     private static String url = "jdbc:mysql://localhost:3306/"; //The URL = jdbc:dbms//host name:port#/db name
     private static String usr = "root"; //user name
-    private static String pswrd = "Password2533"; //password
+    private static String pswrd = ""; //password
 
     public static Connection connect(){
         System.out.println("\n--Connecting to MySQL JDBC--");
