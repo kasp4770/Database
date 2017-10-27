@@ -6,6 +6,10 @@ public class TestConnection {
         //DB_Connector.connect();
 
         DB_Statements stmts = new DB_Statements();
-        stmts.createNewDB();
+        //stmts.createNewDB();
+        stmts.useDB("ThisDatabase");
+        //stmts.createTable("MyTable");
+        //stmts.insertData("myTable");
+        stmts.selectFromTable("MyTable");
     }
 }
