@@ -119,4 +119,23 @@ public class DB_Statements { //------------------HARDCODE----------------------/
             ex.printStackTrace();
         }
     }
+
+    public boolean checkLogin(String username, String password){
+        boolean check = false;
+        String query = "select * from thisdatabase.user where username = '" + username + "' and password = '" +
+                password + "'";
+        try{
+            stmt = con.createStatement();
+            rs = stmt.executeQuery(query);
+            while(rs.next()){
+                check = true;
+                System.out.println("\n--Yaaaaay! It fucking WORKS!!!--");
+            }
+        }
+        catch(SQLException e){
+            System.out.println("\n--Fuck this shit...--");
+            e.printStackTrace();
+        }
+        return check;
+    }
 }
